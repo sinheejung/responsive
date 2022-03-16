@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM Entertainment 반응형 웹사이트</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/pc.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+    <!-- 사이트를 배포할때 필요한 정보들 SEO -->
+    <!-- 사이트 소개글 -->
+    <meta name="description" content="SM Entertainment를 주제로 한 반응형 웹사이트입니다">
+    <!-- 검색 키워드 등록 -->
+    <meta name="keywords" content="UI/UX, 반응형 웹사이트">
+    <!-- 저자(작성자) -->
+    <meta name="author" content="신희정">
+
+    <!-- 오픈그래프 SEO, SNS 최적화 -->
+    <meta property="og:image" content="og-img.jpg">
+    <meta property="og:title" content="반응형 웹사이트-신희정">
+    <meta property="og:description" content="SM Entertainment를 주제로 한 반응형 웹사이트입니다.">
+</head>
+<body>
+    <header>
+        <h1><a href="./">
+            <img src="images/logo.svg" alt="SM Entertainment">
+        </a></h1>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">ARTIST</a></li>
+                <li><a href="#">PRODUCTION</a></li>
+                <li><a href="#">CAREERS</a></li>
+                <li><a href="#">NEWS</a></li>
+            </ul>
+        </nav><!-- gnb 영역 -->
+
+        <div class="right-menu">
+            <select name="lang-menu" id="lang-menu">
+                <option value="">KR</option>
+                <option value="">EN</option>
+                <option value="">CN</option>
+                <option value="">JP</option>
+            </select>
+            <!-- PC용 메뉴 버튼 -->
+            <button id="site-map-btn" class="pc-only">
+                <img src="images/toggle-btn.svg" alt="site map">
+            </button>
+            <!-- 모바일용 토글 버튼 -->
+            <button id="toggle-btn" class="mobile-only">
+                <img src="images/m-menu-btn.svg" alt="main menu">
+            </button>
+        </div>
+    </header>
+    <!-- 모달창 -->
+    <div class="sitemap-modal pc-only">
+        <ul class="depth1">
+            <li><a href="#">COMPANY</a>
+                <ul class="depth2">
+                    <li><a href="#">BUSINESS</a></li>
+                    <li><a href="#">IR</a></li>
+                    <li><a href="#">HISTORY</a></li>
+                    <li><a href="#">MISSION & VISION</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ARTIST</a>
+                <ul class="depth2">
+                    <li><a href="#">MUSICIAN</a></li>
+                    <li><a href="#">ACTOR</a></li>
+                    <li><a href="#">ENTERTAINER</a></li>
+                    <li><a href="#">MODEL</a></li>
+                    <li><a href="#">ATHLETE</a></li>
+                </ul>
+            </li>
+            <li><a href="#">PRODUCTION</a>
+                <ul class="depth2">
+                    <li><a href="#">ALBUM</a></li>
+                    <li><a href="#">MUSIC VIDEO</a></li>
+                    <li><a href="#">SM STATION</a></li>
+                    <li><a href="#">SM CLASSICS</a></li>
+                    <li><a href="#">iScreaM</a></li>
+                    <li><a href="#">REMASTERING</a></li>
+                    <li><a href="#">MOVIE·DRAMA</a></li>
+                    <li><a href="#">VARIETY SHOW</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CAREERS</a>
+                <ul class="depth2">
+                    <li><a href="#">INSIDE SM</a></li>
+                    <li><a href="#">CAREER GUIDE</a></li>
+                </ul>
+            </li>
+            <li><a href="#">NEWS</a>
+                <ul class="depth2">
+                    <li><a href="#">SPOTLIGHT</a></li>
+                    <li><a href="#">NOTICE</a></li>
+                </ul>
+            </li>
+        </ul>
+        <button id="sitemap-modal-close">
+            <img src="images/close-btn.svg" alt="사이트맵 닫기">
+        </button>
+    </div><!-- 모달창 -->
+    
+    <!-- 메인 비쥬얼 -->
+    <div id="main-visual">
+        <div class="title">
+            <p>THE FUTURE OF CULTURE TECHNOLOGY</p>
+            <h2>ASIA'S NO.1<br>
+                ENTERTAINMENT GROUP</h2>
+        </div>
+        <div class="main-img">
+            <img src="images/main-visual.jpg" alt="1">
+        </div>
+    </div>
+    <!-- 콘텐츠 -->
+    <div id="contents" class="vision">
+        <h1>MISSION</h1>
+        <div class="circle-box c1" onclick="changeCircle(0)">
+            <p>ASIA NO.1</p>
+        </div>
+        <div class="circle-box c2" onclick="changeCircle(1)">
+            <p>DIGITAL<br>
+               CONTENTS<br>
+               PROVIDER</p>
+        </div>
+        <div class="circle-box c3" onclick="changeCircle(2)">
+            <p>GLOBAL<br>
+               COMPANY</p>
+        </div>
+        <h2>&amp;VISION</h2>
+    </div>
+    <div id="contents" class="artist" >
+        <div class="title-box on">
+            <h2>ARTIST</h2>
+        </div>
+        <div class="box" onclick="changeImg(0)"></div>
+        <div class="musicion">
+            <h2>MUSICION</h2>
+            <button class="more-btn">
+                <p><a href="#">MORE VIEW</a></p>
+            </button>
+        </div>
+        <div class="box" onclick="changeImg(1)"></div>
+        <div class="actor">
+            <h2>ACTOR</h2>
+            <button class="more-btn">
+                <p><a href="#">MORE VIEW</a></p>
+            </button>
+        </div>
+        <div class="box" onclick="changeImg(2)"></div>
+        <div class="entertainment">
+            <h2>ENTERTAINER</h2>
+            <button class="more-btn">
+                <p><a href="#">MORE VIEW</a></p>
+            </button>
+        </div>
+        <div class="box" onclick="changeImg(3)"></div>
+        <div class="model">
+            <h2>MODEL</h2>
+            <button class="more-btn">
+                <p><a href="#">MORE VIEW</a></p>
+            </button>
+        </div>
+        <div class="box" onclick="changeImg(4)"></div>
+        <div class="athlete">
+            <h2>ATHLETE</h2>
+            <button class="more-btn">
+                <p><a href="#">MORE VIEW</a></p>
+            </button>
+        </div>
+    </div>
+    <div id="contents" class="album">
+        <h1>NEW</h1>
+        
+        <div id="album-gallery" class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide s1"></div>
+                <div class="swiper-slide s2"></div>
+                <div class="swiper-slide s3"></div>
+                <div class="swiper-slide s4"></div>
+            </div>
+        </div>
+        <h2>ALBUM</h2>
+        <div class="swiper-button-prev pc-only"></div>
+        <div class="swiper-button-next pc-only"></div>
+    </div>
+
+    <script src="js/swiper.js"></script>
+    <!-- footer -->
+    <footer>
+        <div class="footer-nav">
+            <ul class="gnb pc-only">
+                <li><strong><a href="#">개인정보처리방침</a></strong><span>|</span></li>
+                <li><a href="#">이메일무단수집거부</a><span>|</span></li>
+                <li><a href="#">브라우저안내</a></li>
+            </ul>
+            <div class="right-menu">
+                <select name="family-site" id="family-site">
+                    <option value="">Family Site</option>
+                    <option value="">SMTOWN</option>
+                    <option value="">SM C&C</option>
+                    <option value="">SM JAPAN</option>
+                    <option value="">Dream Maker</option>
+                    <option value="">KEYEAST</option>
+                    <option value="">SM LDG</option>
+                    <option value="">Esteem</option>
+                    <option value="">MYSTIC STORY</option>
+                </select>
+                <ul class="sns-menu">
+                    <li><a href="#"><img src="images/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/twitter.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/youtube.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/instagram.svg" alt="facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-box">
+            <p class="pc-only">SM Entertainment 83-21, Wangsimni-ro, Seongdong-gu, Seoul, Republic of Korea TEL. 02-6240-9800 Lee Sung Su, Tak Young Jun</p>
+            <p class="copy">Copyright © 2016 SM Entertainment. All Rights Reserved.</p>
+        </div>
+        
+    </footer>
+</body>
+</html>

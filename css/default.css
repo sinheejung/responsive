@@ -1,0 +1,30 @@
+:root {
+    --bg-color: #F8F3E4;
+    --main-color: #F297B3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    font-family: 'Noto Sans KR', sans-serif;
+}
